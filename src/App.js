@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './components/Button';
 import Input from './components/Input';
 import Checkbox from './components/Checkbox';
+import RadioButton from './components/RadioButton';
 import Card from './components/Card';
 
 function App() {
@@ -51,6 +52,12 @@ function App() {
       <div>
         <h2>Checkbox</h2>
         <Checkbox></Checkbox>
+      </div>
+      <div>
+        <h2>Radio Button</h2>
+        <RadioButton name="test" label="Option 1"></RadioButton>
+        <RadioButton name="test" label="Option 2"></RadioButton>
+        <RadioButton name="test" label="Option 3"></RadioButton>
       </div>
 
       <h1>Containers</h1>

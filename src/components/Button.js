@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Colors from '../utils/Colors';
 
 class Button extends Component {

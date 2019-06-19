@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import Colors from '../utils/Colors';
 
-class Checkbox extends Component {
-  constructor(props) {
+class RadioButton extends Component {
+  constructor (props) {
     super(props);
   }
 
-  getCheckboxStyle() {
-    let checkboxStyle = {
-      borderStyle: "solid",
-      borderRadius: 0,
-      borderWidth: 1,
+  getRadioButtonStyle() {
+    let radioButtonStyle = {
       backgroundColor: "#FFFFFF",
       color: Colors.primary,
       marginLeft: 5,
@@ -21,25 +18,26 @@ class Checkbox extends Component {
       cursor: "pointer"
     };
 
-    return checkboxStyle;
+    return radioButtonStyle;
   }
 
   render() {
-    const { onChange, disabled } = this.props;
+    const { name, label, onChange, disabled } = this.props;
 
     return (
-      <input
-        type="checkbox"
+      <label><input
+        type="radio"
+        name={name}
         onChange={onChange}
         disabled={disabled}
-        style={this.getCheckboxStyle()}
-      />
+        style={this.getRadioButtonStyle()}
+      />{label}</label>
     );
   }
 }
 
-Checkbox.defaultProps = {
+RadioButton.defaultProps = {
   disabled: false
 };
 
-export default Checkbox;
+export default RadioButton;
